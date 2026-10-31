@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import data from '../data/prompts.json';
 
 const total = data.prompts.length;
+const curated = data.prompts.filter((p) => !p.id.startsWith('bulk-')).length;
 const catLabel = Object.fromEntries(data.categories.map((c) => [c.id, c.label]));
 ---
 <Base title="Prompt Press — a working prompt library">
@@ -15,14 +16,14 @@ const catLabel = Object.fromEntries(data.categories.map((c) => [c.id, c.label]))
       </div>
       <div class="brand">
         <h1>Prompt <em>Press</em></h1>
-        <p>Copy-ready prompts for real work — <strong>design, digital products, video editing.</strong><br/>Fill the [brackets], paste, go. No filler, no invented claims.</p>
+        <p>Copy-ready prompts for real work — <strong>design, digital products, video editing, mindset, B2B, tech, creative and more.</strong><br/>Fill the [brackets], paste, go. No filler, no invented claims.</p>
       </div>
     </header>
 
     <div class="controls">
       <div class="controls-row">
         <label class="search"><span>SEARCH ⌕</span><input id="search" type="search" placeholder="Try: thumbnail, reel, sales page…" autocomplete="off" /></label>
-        <span class="count" id="count">{total} prompts</span>
+        <span class="count" id="count">Loading…</span>
       </div>
       <div class="chips" role="group" aria-label="Filter by category">
         <button class="chip" data-cat="all" aria-pressed="true">All · {total}</button>
@@ -30,45 +31,23 @@ const catLabel = Object.fromEntries(data.categories.map((c) => [c.id, c.label]))
           const n = data.prompts.filter((p) => p.category === c.id).length;
           return <button class="chip" data-cat={c.id} aria-pressed="false">{c.label} · {n}</button>;
         })}
+        <button class="chip" id="curatedToggle" aria-pressed="false">Curated only · {curated}</button>
       </div>
     </div>
 
     <main>
-      {data.categories.map((cat) => {
-        const items = data.prompts.filter((p) => p.category === cat.id);
-        return (
-          <section data-cat-section={cat.id}>
-            <div class="section-head">
-              <h2>{cat.label}</h2>
-              <p>{cat.description}</p>
-            </div>
-            <div class="grid">
-              {items.map((p) => (
-                <article class="card" data-cat={p.category} data-search={`${p.title} ${p.summary} ${p.prompt} ${(p.tags ?? []).join(' ')}`.toLowerCase()}>
-                  <div class="card-top">
-                    <span class="card-no">№ {p.id.toUpperCase()}</span>
-                    <span class="stamp">{catLabel[p.category]}</span>
-                  </div>
-                  <h3><a href={`/prompts/${p.slug}/`}>{p.title}</a></h3>
-                  <p>{p.summary}</p>
-                  <div class="prompt-preview">{p.prompt}</div>
-                  {p.variables?.length ? (
-                    <div class="vars">{p.variables.map((v) => <code>[{v}]</code>)}</div>
-                  ) : null}
-                  {p.format ? <div class="vars"><code>{p.format}</code></div> : null}
-                  <div class="card-actions">
-                    <button class="btn copy-btn" data-prompt={p.prompt}>Copy prompt</button>
-                    <a class="btn btn-ghost" href={`/prompts/${p.slug}/`}>Open →</a>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </section>
-        );
-      })}
+      <div class="section-head">
+        <h2>Browse the library</h2>
+        <p id="showing">Showing the first 24. Search or filter, then Load more — the full {total} live in the data file, not all in the page at once.</p>
+      </div>
+      <noscript><p>Enable JavaScript to browse, or download the full library below — it contains all {total} prompts.</p></noscript>
+      <div class="grid" id="grid"><p style="color:#4a443a">Loading library…</p></div>
       <div class="empty" id="empty">
         <h3>Nothing in the press matches that.</h3>
         <p>Try a shorter word — or send it as a new prompt idea (see “Add a prompt” below).</p>
+      </div>
+      <div class="load-more-wrap">
+        <button class="btn" id="loadMore" style="display:none">Load more ↓</button>
       </div>
 
       <section class="band" id="downloads">
@@ -104,48 +83,98 @@ const catLabel = Object.fromEntries(data.categories.map((c) => [c.id, c.label]))
   </div>
 
   <script>
+    const PAGE = 24;
+    const grid = document.getElementById('grid');
     const search = document.getElementById('search');
     const count = document.getElementById('count');
+    const showing = document.getElementById('showing');
     const empty = document.getElementById('empty');
-    const chips = [...document.querySelectorAll('.chip')];
+    const loadMore = document.getElementById('loadMore');
+    const curatedToggle = document.getElementById('curatedToggle');
+    const chips = [...document.querySelectorAll('.chip[data-cat]')];
+    let all = [];
+    let catLabel = {};
     let activeCat = 'all';
+    let curatedOnly = false;
+    let visible = PAGE;
+    let filtered = [];
+    let rendered = [];
 
-    function apply() {
-      const q = (search.value || '').trim().toLowerCase();
-      let visible = 0;
-      document.querySelectorAll('.card').forEach((card) => {
-        const okCat = activeCat === 'all' || card.dataset.cat === activeCat;
-        const okQ = !q || card.dataset.search.includes(q);
-        const show = okCat && okQ;
-        card.style.display = show ? '' : 'none';
-        if (show) visible++;
-      });
-      document.querySelectorAll('[data-cat-section]').forEach((sec) => {
-        const any = [...sec.querySelectorAll('.card')].some((c) => c.style.display !== 'none');
-        sec.style.display = any ? '' : 'none';
-      });
-      count.textContent = visible + (visible === 1 ? ' prompt' : ' prompts');
-      empty.classList.toggle('show', visible === 0);
+    function esc(s) {
+      return String(s ?? '').replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
     }
-
+    function applyFilter() {
+      const q = (search.value || '').trim().toLowerCase();
+      filtered = all.filter((p) => {
+        if (curatedOnly && p.id.startsWith('bulk-')) return false;
+        if (activeCat !== 'all' && p.category !== activeCat) return false;
+        if (!q) return true;
+        const hay = (p.title + ' ' + p.summary + ' ' + p.prompt + ' ' + (p.tags || []).join(' ')).toLowerCase();
+        return hay.includes(q);
+      });
+      visible = PAGE;
+      render();
+    }
+    function cardHTML(p, pos) {
+      const vars = (p.variables && p.variables.length)
+        ? '<div class="vars">' + p.variables.map((v) => '<code>[' + esc(v) + ']</code>').join('') + '</div>' : '';
+      const fmt = p.format ? '<div class="vars"><code>' + esc(p.format) + '</code></div>' : '';
+      return '<article class="card">'
+        + '<div class="card-top"><span class="card-no">№ ' + esc(p.id.toUpperCase()) + '</span>'
+        + '<span class="stamp">' + esc(catLabel[p.category] || p.category) + '</span></div>'
+        + '<h3><a href="/prompts/' + esc(p.slug) + '/">' + esc(p.title) + '</a></h3>'
+        + '<p>' + esc(p.summary) + '</p>'
+        + '<div class="prompt-preview">' + esc(p.prompt) + '</div>'
+        + vars + fmt
+        + '<div class="card-actions"><button class="btn copy-btn" data-pos="' + pos + '">Copy prompt</button>'
+        + '<a class="btn btn-ghost" href="/prompts/' + esc(p.slug) + '/">Open →</a></div>'
+        + '</article>';
+    }
+    function render() {
+      rendered = filtered.slice(0, visible);
+      grid.innerHTML = rendered.map(cardHTML).join('');
+      empty.classList.toggle('show', filtered.length === 0);
+      loadMore.style.display = filtered.length > visible ? '' : 'none';
+      count.textContent = filtered.length + (filtered.length === 1 ? ' prompt' : ' prompts');
+      showing.textContent = 'Showing ' + rendered.length + ' of ' + filtered.length + ' matching prompts. Search or filter, then Load more.';
+    }
     chips.forEach((chip) => chip.addEventListener('click', () => {
       activeCat = chip.dataset.cat;
       chips.forEach((c) => c.setAttribute('aria-pressed', String(c === chip)));
-      apply();
+      applyFilter();
     }));
-    search.addEventListener('input', apply);
-
-    document.querySelectorAll('.copy-btn').forEach((btn) => {
-      btn.addEventListener('click', async () => {
-        const original = btn.textContent;
-        try {
-          await navigator.clipboard.writeText(btn.dataset.prompt);
-          btn.textContent = 'Copied ✓';
-        } catch {
-          btn.textContent = 'Select manually →';
-        }
-        setTimeout(() => (btn.textContent = original), 1800);
-      });
+    curatedToggle.addEventListener('click', () => {
+      curatedOnly = !curatedOnly;
+      curatedToggle.setAttribute('aria-pressed', String(curatedOnly));
+      applyFilter();
     });
+    let debounce;
+    search.addEventListener('input', () => {
+      clearTimeout(debounce);
+      debounce = setTimeout(applyFilter, 150);
+    });
+    loadMore.addEventListener('click', () => { visible += PAGE; render(); });
+    grid.addEventListener('click', async (e) => {
+      const btn = e.target.closest('.copy-btn');
+      if (!btn) return;
+      const p = rendered[Number(btn.dataset.pos)];
+      if (!p) return;
+      const original = btn.textContent;
+      try { await navigator.clipboard.writeText(p.prompt); btn.textContent = 'Copied ✓'; }
+      catch { btn.textContent = 'Select manually →'; }
+      setTimeout(() => (btn.textContent = original), 1800);
+    });
+
+    fetch('/downloads/prompts.json')
+      .then((r) => r.json())
+      .then((data) => {
+        all = data.prompts || [];
+        catLabel = Object.fromEntries((data.categories || []).map((c) => [c.id, c.label]));
+        applyFilter();
+      })
+      .catch(() => {
+        grid.innerHTML = '<p>Could not load the library. Download the full file below — it contains every prompt.</p>';
+        count.textContent = 'Load failed';
+      });
   </script>
 </Base>
