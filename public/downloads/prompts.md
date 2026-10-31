@@ -1,6 +1,6 @@
 # Prompt Library
 
-31 prompts. Source of truth: `src/data/prompts.json`.
+85 prompts. Source of truth: `src/data/prompts.json`.
 
 ## Design & Graphics
 
@@ -313,6 +313,462 @@ A simple morning / midday / evening practice to stay focused on one goal.
 Fill in: [GOAL], [MINUTES PER DAY]
 
 Build me a simple daily practice to stay focused on my goal: [GOAL]. I have about [MINUTES PER DAY] minutes total. Split it into three short parts: morning (pick today's one action and read my goal sentence), midday (a 1-minute check: am I on track, yes or no, and what is next), and evening (review what I did, what I learned, and tomorrow's one action). Make it fit on one page, use my own words where I give them, and keep every step under 5 minutes. Include a weekly review question: what worked, what didn't, and what changes next week. Do not add extra habits, apps, or purchases I did not ask for.
+
+---
+
+## System Prompts
+
+Load one of these as the operating role before running the prompts in its lane.
+
+### System Prompt 1: The Tactical Communicator & B2B Frame Controller
+
+Act as an elite psychological tactician specializing in frame control, emotional leverage, and strategic silence.
+
+Act as an elite psychological tactician specializing in frame control, emotional leverage, and strategic silence. Your objective is to engineer B2B negotiation frameworks, LinkedIn outreach sequences, and high-stakes client communications. Never defend or over-explain. Use calculated vulnerability, soft psychological pressure, and frame-shifting to ensure the user dominates the interaction while the client feels they are making the decision.
+
+---
+
+### System Prompt 2: The Genius OS Execution Engine
+
+Act as a ruthless productivity strategist operating on the principles of the Leverage Matrix, Inversion, and Parkinson's Law.
+
+Act as a ruthless productivity strategist operating on the principles of the Leverage Matrix, Inversion, and Parkinson's Law. Your goal is to map hyper-efficient execution blueprints for complex technical architectures and mobile game ecosystems. Identify the critical failure point of any sprint, strip away low-impact/high-effort friction, and define strict time containers with measurable 'done' states.
+
+---
+
+### System Prompt 3: The Mentalist Creative Director
+
+Act as a hyper-aware behavioral analyst and creative strategist.
+
+Act as a hyper-aware behavioral analyst and creative strategist. Utilize cold reading principles, micro-expression analysis, and the Memory Palace technique to organize complex visual assets and engineer high-converting video creatives. Plant subtle psychological hooks and pattern-interrupts in the first 3 seconds of content to capture audience attention and drive performance metrics.
+
+---
+
+### System Prompt 4: The Zero-Friction AI Automator
+
+Act as a cutting-edge automation architect and AI agent orchestrator.
+
+Act as a cutting-edge automation architect and AI agent orchestrator. Your objective is to map out hyper-efficient, privacy-focused tool chains and workflows. Prioritize zero-API, client-side data processing and local LLM/agent routing. Seamlessly integrate multi-agent frameworks to automate repetitive coding, ad generation, and developer operations without relying on bloated cloud subscriptions.
+
+---
+
+## Frame Control & B2B Outreach
+
+LinkedIn, follow-ups, negotiation and closing for DTC and B2B creative services.
+
+### The Silent Authority Pitch
+
+Draft a LinkedIn outreach sequence targeting DTC brand founders that uses strategic silence and frame control.
+
+Draft a LinkedIn outreach sequence targeting DTC brand founders that uses strategic silence and frame control. Position our AI-powered UGC creative services not as a pitch, but as a critical diagnosis of their current ad spend bleed.
+
+---
+
+### The Soft-Pressure Follow-Up
+
+Create a follow-up email for a high-ticket Meta video creative lead who ghosted.
+
+Create a follow-up email for a high-ticket Meta video creative lead who ghosted. Use calculated vulnerability and soft psychological pressure to trigger their fear of missing out on the Q4 rush without sounding desperate.
+
+---
+
+### The Logic-Reversal Negotiation
+
+A potential client claims our 3D motion graphics retainer is too expensive.
+
+A potential client claims our 3D motion graphics retainer is too expensive. Script a live call response that turns their logic against them, shifting the frame from 'cost' to 'the massive opportunity cost of unoptimized TikTok Shop creatives.'
+
+---
+
+### The Egotistical Hook
+
+Write a cold DM script that strokes a marketing director's ego while subtly pointing out a critical flaw in their current character consistency across ads, p...
+
+Write a cold DM script that strokes a marketing director's ego while subtly pointing out a critical flaw in their current character consistency across ads, positioning the Character Lock Method as the only elite solution.
+
+---
+
+### The Takeaway Proposal
+
+Draft a project proposal for a new AstroJS web architecture client.
+
+Draft a project proposal for a new AstroJS web architecture client. Include a section that uses the 'takeaway' psychological technique, setting strict boundaries on our availability to increase perceived value.
+
+---
+
+### The Frame-Reset Meeting Agenda
+
+Outline a 15-minute discovery call agenda.
+
+Outline a 15-minute discovery call agenda. Structure the questions to ensure I maintain absolute frame control, forcing the prospect to qualify themselves for our performance ad services.
+
+---
+
+### The Competitor Disruption Script
+
+Write a script for addressing a lead who compares ORQA Solutions to a cheaper competitor.
+
+Write a script for addressing a lead who compares ORQA Solutions to a cheaper competitor. Use dark communication techniques to subtly devalue the competitor's standard UGC without direct insults.
+
+---
+
+### The Trust-Building Vulnerability Post
+
+Draft a LinkedIn post sharing a recent challenge in configuring Android packaging in Unreal Engine 5.8.
+
+Draft a LinkedIn post sharing a recent challenge in configuring Android packaging in Unreal Engine 5.8. Use this calculated vulnerability to demonstrate deep technical expertise and build trust with B2B tech leads.
+
+---
+
+### The Diagnostic Authority Trap
+
+Create a 'free audit' framework for DTC TikTok ads.
+
+Create a 'free audit' framework for DTC TikTok ads. Structure the audit to highlight micro-expression failures in their current actors, using cold-reading psychology to prove our superior creative direction.
+
+---
+
+### The Uncomfortable Silence Closer
+
+Script the final 3 minutes of a closing call.
+
+Script the final 3 minutes of a closing call. Detail exactly when to deploy a 3-second strategic silence after presenting the pricing for our Flutter game development services, maximizing conversion probability.
+
+---
+
+## Genius OS: Game Dev & Tech
+
+Leverage Matrix, Inversion and Parkinson's Law applied to games, apps and web architecture.
+
+### The UE5 Spline Track Bottleneck
+
+Apply the Leverage Matrix to my 3D racing game prototype.
+
+Apply the Leverage Matrix to my 3D racing game prototype. I'm spending too much time tweaking NavMesh AI. Identify the critical failure point and outline a 60-minute time-contained sprint to finalize the core track logic.
+
+---
+
+### The Call of Honour Sprint Inversion
+
+Run an Inversion analysis on the launch of 'CALL OF HONOUR: MODERN WARZONE'.
+
+Run an Inversion analysis on the launch of 'CALL OF HONOUR: MODERN WARZONE'. What are the three most likely reasons the 35-campaign mission structure fails to compile smoothly in Capacitor, and how do I redesign the friction today?
+
+---
+
+### The Zero-API Architecture Parkinson's Law
+
+I need to finalize the data routing for freefinancialcal.com using AstroJS and Cloudflare Workers.
+
+I need to finalize the data routing for freefinancialcal.com using AstroJS and Cloudflare Workers. Define 'done' for a 90-minute deep work session that forces me to lock in the client-side privacy architecture without over-engineering.
+
+---
+
+### The Android Launcher Feedback Loop
+
+Apply the Feedback Loop principle to the 'NOIR // VORTEX 4K' launcher deployment.
+
+Apply the Feedback Loop principle to the 'NOIR // VORTEX 4K' launcher deployment. What exact signal should I measure in the Google Play Console during the first 7 days to prove the NDK 27+ stability is holding?
+
+---
+
+### The Play Console Operations Batching
+
+I manage 5 Google Play Console accounts.
+
+I manage 5 Google Play Console accounts. Categorize all developer operations (app signing, keystore generation, compliance updates) into a low-impact/low-effort batching schedule so it doesn't drain my high-focus windows.
+
+---
+
+### The Flame Engine Halfway Question
+
+Halfway through a 2-hour sprint coding a Flutter arcade game, I often get distracted by particle effects.
+
+Halfway through a 2-hour sprint coding a Flutter arcade game, I often get distracted by particle effects. Create a 'Halfway Question' protocol that forces me to drop visual polish and focus entirely on core Riverpod state management.
+
+---
+
+### The Web Audio API Pre-Mortem
+
+Conduct a pre-mortem on the Web Audio API integration for my Three.js shooter.
+
+Conduct a pre-mortem on the Web Audio API integration for my Three.js shooter. What is the single mistake that would make all the custom soundscapes out of sync on mobile browsers, and how do I prevent it?
+
+---
+
+### The Target API 35 Time Container
+
+Set a strict time container for upgrading all ORQA Games legacy apps to Target API Level 35 and JDK 21+.
+
+Set a strict time container for upgrading all ORQA Games legacy apps to Target API Level 35 and JDK 21+. Break this down into 45-minute blocks with clearly defined outcomes to prevent scope creep.
+
+---
+
+### The Asset Delivery Diagnostic
+
+Create a short diagnostic test to verify that Google Play Asset Delivery is functioning correctly in my UE5.8 build before committing the final APK.
+
+Create a short diagnostic test to verify that Google Play Asset Delivery is functioning correctly in my UE5.8 build before committing the final APK.
+
+---
+
+### The Daily Tech Stack Reset
+
+Design a 10-minute end-of-day routine that prepares my local environment (Tailwind CSS v4, Three.js, Astro) for the next morning, removing all starting frict...
+
+Design a 10-minute end-of-day routine that prepares my local environment (Tailwind CSS v4, Three.js, Astro) for the next morning, removing all starting friction for my highest leverage task.
+
+---
+
+## Creative Direction & Character Lock
+
+Hooks, character consistency, ad audits and creative pitches for video and 3D work.
+
+### The Wednesday Addams Hook
+
+Script a 15-second TikTok Shop ad using a gothic/Wednesday Addams aesthetic contrasting with a bright modern environment.
+
+Script a 15-second TikTok Shop ad using a gothic/Wednesday Addams aesthetic contrasting with a bright modern environment. Embed cold-reading visual triggers in the first 3 seconds to halt the doom-scroll.
+
+---
+
+### The Character Lock Memory Palace
+
+Design a mental 'Memory Palace' framework for organizing the prompt seeds, seed values, and negative prompts required to maintain 100% character consistency ...
+
+Design a mental 'Memory Palace' framework for organizing the prompt seeds, seed values, and negative prompts required to maintain 100% character consistency across a 10-video AI UGC campaign.
+
+---
+
+### The Micro-Expression Ad Audit
+
+Create a checklist based on Patrick Jane's observation techniques to audit AI-generated human faces in our Meta video creatives.
+
+Create a checklist based on Patrick Jane's observation techniques to audit AI-generated human faces in our Meta video creatives. Look for unnatural eye twitches or lip syncing failures that break viewer trust.
+
+---
+
+### The Wellness Drink Subconscious Trigger
+
+Draft the visual storyboard for an organic Mulethi root and Beetroot powder wellness drink.
+
+Draft the visual storyboard for an organic Mulethi root and Beetroot powder wellness drink. Use dark psychology color theory and pacing to trigger a subconscious desire for skin-clearing health.
+
+---
+
+### The Soft Reject Creative Pitch
+
+Write an email to a client rejecting their boring ad concept.
+
+Write an email to a client rejecting their boring ad concept. Use the 'Soft Reject' technique (e.g., 'That's one way to look at it, but most average brands do that...') to pivot them toward our high-performance Character Lock framework.
+
+---
+
+### The 3D Motion Graphics Leverage
+
+Evaluate my workflow for creating 3D motion graphics for DTC brands.
+
+Evaluate my workflow for creating 3D motion graphics for DTC brands. What high-effort, low-impact rendering tasks can be eliminated, simplified, or delayed to double my output speed?
+
+---
+
+### The Viral Format Reverse-Engineering
+
+Use the 'Import from GitHub' / Reverse Engineering mindset to break down a competitor's viral TikTok ad.
+
+Use the 'Import from GitHub' / Reverse Engineering mindset to break down a competitor's viral TikTok ad. How do I deconstruct their pacing, sound design, and frame-shifts to build a superior template?
+
+---
+
+### The Client-Side Tool Landing Page
+
+Write the copy for texttotable.site (Text to Columns Online).
+
+Write the copy for texttotable.site (Text to Columns Online). Use psychological leverage to highlight the absolute data privacy of a client-side clipboard utility compared to server-side competitors.
+
+---
+
+### The Fab Asset Store Optimization
+
+Create a strategic plan for publishing 3D models and developer asset packs on Fab.
+
+Create a strategic plan for publishing 3D models and developer asset packs on Fab. Use the Feedback Loop principle to define exactly what metrics (views vs. wishlists) will dictate our next asset pack theme.
+
+---
+
+### The Orqa Ludo Grove Engagement Loop
+
+Design the push notification strategy for 'Orqa Ludo Grove'.
+
+Design the push notification strategy for 'Orqa Ludo Grove'. Use calculated unpredictability and emotional triggers to maximize daily active users without being marked as spam.
+
+---
+
+## Deep Work & Focus
+
+Focus blocks, done-states, energy traps and reactivity shields for daily execution.
+
+### The Unstoppable Focus Protocol
+
+Design a customized 4-hour morning deep work block for architecture planning.
+
+Design a customized 4-hour morning deep work block for architecture planning. Integrate the principle of 'Strategic Silence' not just for communication, but for my physical environment.
+
+---
+
+### The Define Done Web Agency Sprint
+
+For the ongoing web development of orqasolutions.online, explicitly define 'done' for a 90-minute session focused purely on the Tailwind CSS v4 responsive la...
+
+For the ongoing web development of orqasolutions.online, explicitly define 'done' for a 90-minute session focused purely on the Tailwind CSS v4 responsive layout.
+
+---
+
+### The Energy Trap Elimination
+
+I am spending too much time researching plant-based superfoods on Daraz instead of coding.
+
+I am spending too much time researching plant-based superfoods on Daraz instead of coding. Create a psychological interrupt that frames this research as a 'Low Impact, High Effort' energy trap during work hours.
+
+---
+
+### The High-Status Pacing Routine
+
+Translate the 'Body Language of Control' (slow movements, relaxed posture, steady eye contact) into a pre-meeting physical routine to ground myself before pi...
+
+Translate the 'Body Language of Control' (slow movements, relaxed posture, steady eye contact) into a pre-meeting physical routine to ground myself before pitching enterprise clients on Zoom.
+
+---
+
+### The Frictionless Game Design Engine
+
+I want to build out the remaining campaign missions for the 3D web shooter.
+
+I want to build out the remaining campaign missions for the 3D web shooter. Redesign my digital workspace friction so that opening Three.js and the mission logic file is the easiest possible action when I sit down.
+
+---
+
+### The Cognitive Load Offloading
+
+Use the Memory Palace concept to mentally map out the entire app ecosystem (wallpapers, launchers, arcade games, financial tools) so I can context-switch sea...
+
+Use the Memory Palace concept to mentally map out the entire app ecosystem (wallpapers, launchers, arcade games, financial tools) so I can context-switch seamlessly without feeling overwhelmed.
+
+---
+
+### The No Perfection Rule
+
+Draft a personal manifesto for ORQA Solutions based on Parkinson's Law.
+
+Draft a personal manifesto for ORQA Solutions based on Parkinson's Law. Establish the rule that speed of execution and rapid market feedback loop is infinitely superior to delayed perfection in web tool architecture.
+
+---
+
+### The 14-Day Agency Scale Challenge
+
+Map out a 14-day 'Genius Operating System' challenge specifically for acquiring 3 new B2B performance marketing clients.
+
+Map out a 14-day 'Genius Operating System' challenge specifically for acquiring 3 new B2B performance marketing clients. What is the one daily signal I must measure?
+
+---
+
+### The Emotional Reactivity Shield
+
+Create a mental framework for dealing with Google Play Console rejections or policy strikes.
+
+Create a mental framework for dealing with Google Play Console rejections or policy strikes. How do I apply 'Emotional Non-Reactivity' to immediately diagnose the technical compliance issue without frustration?
+
+---
+
+### The Asymmetrical Effort Audit
+
+Look at my daily content calendar planning for LinkedIn and Instagram.
+
+Look at my daily content calendar planning for LinkedIn and Instagram. Where am I applying symmetrical effort (treating all posts equally) instead of finding the asymmetrical leverage point that drives 80% of the engagement?
+
+---
+
+## Ecosystem Scaling
+
+Retention, monetisation, cross-promotion and publisher identity across apps and tools.
+
+### The FIRE Calculator Retention Hook
+
+Design the user flow for the FIRE calculator utility on freefinancialcal.com.
+
+Design the user flow for the FIRE calculator utility on freefinancialcal.com. How can I use visual progress bars and psychological anchoring to make users inherently trust the privacy-first architecture?
+
+---
+
+### The Zero-API Manifesto
+
+Write a thought-leadership article for LinkedIn explaining why client-side, zero-API architecture is the future of web utilities.
+
+Write a thought-leadership article for LinkedIn explaining why client-side, zero-API architecture is the future of web utilities. Use frame control to position server-dependent apps as outdated and unsafe.
+
+---
+
+### The Asset Store Dominance Strategy
+
+Plan the release schedule for 5 developer asset packs on Fab.
+
+Plan the release schedule for 5 developer asset packs on Fab. How do I use the 'Critical Failure Point' analysis to ensure none of the packs get buried in the algorithm on launch week?
+
+---
+
+### The Ludo Grove Monetization Psychology
+
+Design the in-app purchase economy for 'Orqa Ludo Grove'.
+
+Design the in-app purchase economy for 'Orqa Ludo Grove'. Use soft psychological leverage — offering immense free value but creating slight friction that users gladly pay to remove.
+
+---
+
+### The Call of Honour Lore Bible
+
+Structure a lore and narrative document for the 35 campaign missions.
+
+Structure a lore and narrative document for the 35 campaign missions. Use the method of Loci (Memory Palace) to organize the enemy factions, weapon tiers, and level environments efficiently.
+
+---
+
+### The Cross-Promotion Funnel
+
+Map out a seamless cross-promotion strategy between the 'NOIR // VORTEX 4K' app and the Flutter arcade games.
+
+Map out a seamless cross-promotion strategy between the 'NOIR // VORTEX 4K' app and the Flutter arcade games. How do I move users between apps without triggering ad fatigue?
+
+---
+
+### The Agentic Workflow for Video Ads
+
+Design a completely automated workflow using AI agents to scrape trending TikTok audio, generate Character Lock image seeds, and compile the final 3D motion ...
+
+Design a completely automated workflow using AI agents to scrape trending TikTok audio, generate Character Lock image seeds, and compile the final 3D motion graphic prompt sequence.
+
+---
+
+### The ORQA Games Publisher Identity
+
+Draft the brand positioning statement for the 5 Google Play Console accounts.
+
+Draft the brand positioning statement for the 5 Google Play Console accounts. How do we use 'Calculated Vulnerability' in our app store descriptions to connect with indie gamers while projecting AAA studio competence?
+
+---
+
+### The Text-to-Columns Growth Loop
+
+Design a viral growth loop for texttotable.site.
+
+Design a viral growth loop for texttotable.site. What specific feature can I add that makes data analysts want to share this client-side formatting tool with their entire department?
+
+---
+
+### The Ultimate Ecosystem Synergy
+
+Create a high-level mind map prompt that connects the cash flow from the B2B performance ad agency to the R&D funding for the Unreal Engine 5 racing games an...
+
+Create a high-level mind map prompt that connects the cash flow from the B2B performance ad agency to the R&D funding for the Unreal Engine 5 racing games and AstroJS web tools, ensuring all systems feed into each other.
 
 ---
 

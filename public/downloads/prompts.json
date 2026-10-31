@@ -19,6 +19,36 @@
       "id": "mindset-goals",
       "label": "Mindset & Goals",
       "description": "From the manifestation video: define it, write it, visualise it, check FTBA alignment, then take one real action. No guaranteed outcomes — clarity plus action."
+    },
+    {
+      "id": "system-prompts",
+      "label": "System Prompts",
+      "description": "Load one of these as the operating role before running the prompts in its lane."
+    },
+    {
+      "id": "b2b-frame-control",
+      "label": "Frame Control & B2B Outreach",
+      "description": "LinkedIn, follow-ups, negotiation and closing for DTC and B2B creative services."
+    },
+    {
+      "id": "genius-os-tech",
+      "label": "Genius OS: Game Dev & Tech",
+      "description": "Leverage Matrix, Inversion and Parkinson's Law applied to games, apps and web architecture."
+    },
+    {
+      "id": "creative-character-lock",
+      "label": "Creative Direction & Character Lock",
+      "description": "Hooks, character consistency, ad audits and creative pitches for video and 3D work."
+    },
+    {
+      "id": "deep-work",
+      "label": "Deep Work & Focus",
+      "description": "Focus blocks, done-states, energy traps and reactivity shields for daily execution."
+    },
+    {
+      "id": "ecosystem-scaling",
+      "label": "Ecosystem Scaling",
+      "description": "Retention, monetisation, cross-promotion and publisher identity across apps and tools."
     }
   ],
   "prompts": [
@@ -517,7 +547,763 @@
         "routine",
         "review"
       ]
+    },
+    {
+      "id": "sys-01",
+      "slug": "tactical-communicator-b2b-frame-controller",
+      "title": "System Prompt 1: The Tactical Communicator & B2B Frame Controller",
+      "category": "system-prompts",
+      "summary": "Act as an elite psychological tactician specializing in frame control, emotional leverage, and strategic silence.",
+      "prompt": "Act as an elite psychological tactician specializing in frame control, emotional leverage, and strategic silence. Your objective is to engineer B2B negotiation frameworks, LinkedIn outreach sequences, and high-stakes client communications. Never defend or over-explain. Use calculated vulnerability, soft psychological pressure, and frame-shifting to ensure the user dominates the interaction while the client feels they are making the decision.",
+      "variables": [],
+      "tags": [
+        "system",
+        "b2b",
+        "negotiation"
+      ]
+    },
+    {
+      "id": "sys-02",
+      "slug": "genius-os-execution-engine",
+      "title": "System Prompt 2: The Genius OS Execution Engine",
+      "category": "system-prompts",
+      "summary": "Act as a ruthless productivity strategist operating on the principles of the Leverage Matrix, Inversion, and Parkinson's Law.",
+      "prompt": "Act as a ruthless productivity strategist operating on the principles of the Leverage Matrix, Inversion, and Parkinson's Law. Your goal is to map hyper-efficient execution blueprints for complex technical architectures and mobile game ecosystems. Identify the critical failure point of any sprint, strip away low-impact/high-effort friction, and define strict time containers with measurable 'done' states.",
+      "variables": [],
+      "tags": [
+        "system",
+        "productivity",
+        "execution"
+      ]
+    },
+    {
+      "id": "sys-03",
+      "slug": "mentalist-creative-director",
+      "title": "System Prompt 3: The Mentalist Creative Director",
+      "category": "system-prompts",
+      "summary": "Act as a hyper-aware behavioral analyst and creative strategist.",
+      "prompt": "Act as a hyper-aware behavioral analyst and creative strategist. Utilize cold reading principles, micro-expression analysis, and the Memory Palace technique to organize complex visual assets and engineer high-converting video creatives. Plant subtle psychological hooks and pattern-interrupts in the first 3 seconds of content to capture audience attention and drive performance metrics.",
+      "variables": [],
+      "tags": [
+        "system",
+        "creative",
+        "video"
+      ]
+    },
+    {
+      "id": "sys-04",
+      "slug": "zero-friction-ai-automator",
+      "title": "System Prompt 4: The Zero-Friction AI Automator",
+      "category": "system-prompts",
+      "summary": "Act as a cutting-edge automation architect and AI agent orchestrator.",
+      "prompt": "Act as a cutting-edge automation architect and AI agent orchestrator. Your objective is to map out hyper-efficient, privacy-focused tool chains and workflows. Prioritize zero-API, client-side data processing and local LLM/agent routing. Seamlessly integrate multi-agent frameworks to automate repetitive coding, ad generation, and developer operations without relying on bloated cloud subscriptions.",
+      "variables": [],
+      "tags": [
+        "system",
+        "automation",
+        "privacy"
+      ]
+    },
+    {
+      "id": "b2b-01",
+      "slug": "silent-authority-pitch",
+      "title": "The Silent Authority Pitch",
+      "category": "b2b-frame-control",
+      "summary": "Draft a LinkedIn outreach sequence targeting DTC brand founders that uses strategic silence and frame control.",
+      "prompt": "Draft a LinkedIn outreach sequence targeting DTC brand founders that uses strategic silence and frame control. Position our AI-powered UGC creative services not as a pitch, but as a critical diagnosis of their current ad spend bleed.",
+      "variables": [],
+      "tags": [
+        "linkedin",
+        "outreach",
+        "dtc"
+      ]
+    },
+    {
+      "id": "b2b-02",
+      "slug": "soft-pressure-follow-up",
+      "title": "The Soft-Pressure Follow-Up",
+      "category": "b2b-frame-control",
+      "summary": "Create a follow-up email for a high-ticket Meta video creative lead who ghosted.",
+      "prompt": "Create a follow-up email for a high-ticket Meta video creative lead who ghosted. Use calculated vulnerability and soft psychological pressure to trigger their fear of missing out on the Q4 rush without sounding desperate.",
+      "variables": [],
+      "tags": [
+        "follow-up",
+        "email",
+        "meta"
+      ]
+    },
+    {
+      "id": "b2b-03",
+      "slug": "logic-reversal-negotiation",
+      "title": "The Logic-Reversal Negotiation",
+      "category": "b2b-frame-control",
+      "summary": "A potential client claims our 3D motion graphics retainer is too expensive.",
+      "prompt": "A potential client claims our 3D motion graphics retainer is too expensive. Script a live call response that turns their logic against them, shifting the frame from 'cost' to 'the massive opportunity cost of unoptimized TikTok Shop creatives.'",
+      "variables": [],
+      "tags": [
+        "negotiation",
+        "pricing",
+        "retainer"
+      ]
+    },
+    {
+      "id": "b2b-04",
+      "slug": "egotistical-hook",
+      "title": "The Egotistical Hook",
+      "category": "b2b-frame-control",
+      "summary": "Write a cold DM script that strokes a marketing director's ego while subtly pointing out a critical flaw in their current character consistency across ads, p...",
+      "prompt": "Write a cold DM script that strokes a marketing director's ego while subtly pointing out a critical flaw in their current character consistency across ads, positioning the Character Lock Method as the only elite solution.",
+      "variables": [],
+      "tags": [
+        "dm",
+        "cold-outreach",
+        "character-lock"
+      ]
+    },
+    {
+      "id": "b2b-05",
+      "slug": "takeaway-proposal",
+      "title": "The Takeaway Proposal",
+      "category": "b2b-frame-control",
+      "summary": "Draft a project proposal for a new AstroJS web architecture client.",
+      "prompt": "Draft a project proposal for a new AstroJS web architecture client. Include a section that uses the 'takeaway' psychological technique, setting strict boundaries on our availability to increase perceived value.",
+      "variables": [],
+      "tags": [
+        "proposal",
+        "astro",
+        "web"
+      ]
+    },
+    {
+      "id": "b2b-06",
+      "slug": "frame-reset-meeting-agenda",
+      "title": "The Frame-Reset Meeting Agenda",
+      "category": "b2b-frame-control",
+      "summary": "Outline a 15-minute discovery call agenda.",
+      "prompt": "Outline a 15-minute discovery call agenda. Structure the questions to ensure I maintain absolute frame control, forcing the prospect to qualify themselves for our performance ad services.",
+      "variables": [],
+      "tags": [
+        "discovery-call",
+        "agenda",
+        "sales"
+      ]
+    },
+    {
+      "id": "b2b-07",
+      "slug": "competitor-disruption-script",
+      "title": "The Competitor Disruption Script",
+      "category": "b2b-frame-control",
+      "summary": "Write a script for addressing a lead who compares ORQA Solutions to a cheaper competitor.",
+      "prompt": "Write a script for addressing a lead who compares ORQA Solutions to a cheaper competitor. Use dark communication techniques to subtly devalue the competitor's standard UGC without direct insults.",
+      "variables": [],
+      "tags": [
+        "competitor",
+        "objection",
+        "orqa"
+      ]
+    },
+    {
+      "id": "b2b-08",
+      "slug": "trust-building-vulnerability-post",
+      "title": "The Trust-Building Vulnerability Post",
+      "category": "b2b-frame-control",
+      "summary": "Draft a LinkedIn post sharing a recent challenge in configuring Android packaging in Unreal Engine 5.8.",
+      "prompt": "Draft a LinkedIn post sharing a recent challenge in configuring Android packaging in Unreal Engine 5.8. Use this calculated vulnerability to demonstrate deep technical expertise and build trust with B2B tech leads.",
+      "variables": [],
+      "tags": [
+        "linkedin",
+        "unreal",
+        "android"
+      ]
+    },
+    {
+      "id": "b2b-09",
+      "slug": "diagnostic-authority-trap",
+      "title": "The Diagnostic Authority Trap",
+      "category": "b2b-frame-control",
+      "summary": "Create a 'free audit' framework for DTC TikTok ads.",
+      "prompt": "Create a 'free audit' framework for DTC TikTok ads. Structure the audit to highlight micro-expression failures in their current actors, using cold-reading psychology to prove our superior creative direction.",
+      "variables": [],
+      "tags": [
+        "audit",
+        "tiktok",
+        "dtc"
+      ]
+    },
+    {
+      "id": "b2b-10",
+      "slug": "uncomfortable-silence-closer",
+      "title": "The Uncomfortable Silence Closer",
+      "category": "b2b-frame-control",
+      "summary": "Script the final 3 minutes of a closing call.",
+      "prompt": "Script the final 3 minutes of a closing call. Detail exactly when to deploy a 3-second strategic silence after presenting the pricing for our Flutter game development services, maximizing conversion probability.",
+      "variables": [],
+      "tags": [
+        "closing",
+        "flutter",
+        "sales"
+      ]
+    },
+    {
+      "id": "tech-01",
+      "slug": "ue5-spline-track-bottleneck",
+      "title": "The UE5 Spline Track Bottleneck",
+      "category": "genius-os-tech",
+      "summary": "Apply the Leverage Matrix to my 3D racing game prototype.",
+      "prompt": "Apply the Leverage Matrix to my 3D racing game prototype. I'm spending too much time tweaking NavMesh AI. Identify the critical failure point and outline a 60-minute time-contained sprint to finalize the core track logic.",
+      "variables": [],
+      "tags": [
+        "ue5",
+        "racing",
+        "sprint"
+      ]
+    },
+    {
+      "id": "tech-02",
+      "slug": "call-of-honour-sprint-inversion",
+      "title": "The Call of Honour Sprint Inversion",
+      "category": "genius-os-tech",
+      "summary": "Run an Inversion analysis on the launch of 'CALL OF HONOUR: MODERN WARZONE'.",
+      "prompt": "Run an Inversion analysis on the launch of 'CALL OF HONOUR: MODERN WARZONE'. What are the three most likely reasons the 35-campaign mission structure fails to compile smoothly in Capacitor, and how do I redesign the friction today?",
+      "variables": [],
+      "tags": [
+        "capacitor",
+        "inversion",
+        "game"
+      ]
+    },
+    {
+      "id": "tech-03",
+      "slug": "zero-api-architecture-parkinsons-law",
+      "title": "The Zero-API Architecture Parkinson's Law",
+      "category": "genius-os-tech",
+      "summary": "I need to finalize the data routing for freefinancialcal.com using AstroJS and Cloudflare Workers.",
+      "prompt": "I need to finalize the data routing for freefinancialcal.com using AstroJS and Cloudflare Workers. Define 'done' for a 90-minute deep work session that forces me to lock in the client-side privacy architecture without over-engineering.",
+      "variables": [],
+      "tags": [
+        "astro",
+        "cloudflare",
+        "privacy"
+      ]
+    },
+    {
+      "id": "tech-04",
+      "slug": "android-launcher-feedback-loop",
+      "title": "The Android Launcher Feedback Loop",
+      "category": "genius-os-tech",
+      "summary": "Apply the Feedback Loop principle to the 'NOIR // VORTEX 4K' launcher deployment.",
+      "prompt": "Apply the Feedback Loop principle to the 'NOIR // VORTEX 4K' launcher deployment. What exact signal should I measure in the Google Play Console during the first 7 days to prove the NDK 27+ stability is holding?",
+      "variables": [],
+      "tags": [
+        "launcher",
+        "play-console",
+        "ndk"
+      ]
+    },
+    {
+      "id": "tech-05",
+      "slug": "play-console-operations-batching",
+      "title": "The Play Console Operations Batching",
+      "category": "genius-os-tech",
+      "summary": "I manage 5 Google Play Console accounts.",
+      "prompt": "I manage 5 Google Play Console accounts. Categorize all developer operations (app signing, keystore generation, compliance updates) into a low-impact/low-effort batching schedule so it doesn't drain my high-focus windows.",
+      "variables": [],
+      "tags": [
+        "play-console",
+        "batching",
+        "operations"
+      ]
+    },
+    {
+      "id": "tech-06",
+      "slug": "flame-engine-halfway-question",
+      "title": "The Flame Engine Halfway Question",
+      "category": "genius-os-tech",
+      "summary": "Halfway through a 2-hour sprint coding a Flutter arcade game, I often get distracted by particle effects.",
+      "prompt": "Halfway through a 2-hour sprint coding a Flutter arcade game, I often get distracted by particle effects. Create a 'Halfway Question' protocol that forces me to drop visual polish and focus entirely on core Riverpod state management.",
+      "variables": [],
+      "tags": [
+        "flutter",
+        "riverpod",
+        "focus"
+      ]
+    },
+    {
+      "id": "tech-07",
+      "slug": "web-audio-api-pre-mortem",
+      "title": "The Web Audio API Pre-Mortem",
+      "category": "genius-os-tech",
+      "summary": "Conduct a pre-mortem on the Web Audio API integration for my Three.js shooter.",
+      "prompt": "Conduct a pre-mortem on the Web Audio API integration for my Three.js shooter. What is the single mistake that would make all the custom soundscapes out of sync on mobile browsers, and how do I prevent it?",
+      "variables": [],
+      "tags": [
+        "threejs",
+        "audio",
+        "pre-mortem"
+      ]
+    },
+    {
+      "id": "tech-08",
+      "slug": "target-api-35-time-container",
+      "title": "The Target API 35 Time Container",
+      "category": "genius-os-tech",
+      "summary": "Set a strict time container for upgrading all ORQA Games legacy apps to Target API Level 35 and JDK 21+.",
+      "prompt": "Set a strict time container for upgrading all ORQA Games legacy apps to Target API Level 35 and JDK 21+. Break this down into 45-minute blocks with clearly defined outcomes to prevent scope creep.",
+      "variables": [],
+      "tags": [
+        "android",
+        "api-35",
+        "jdk"
+      ]
+    },
+    {
+      "id": "tech-09",
+      "slug": "asset-delivery-diagnostic",
+      "title": "The Asset Delivery Diagnostic",
+      "category": "genius-os-tech",
+      "summary": "Create a short diagnostic test to verify that Google Play Asset Delivery is functioning correctly in my UE5.8 build before committing the final APK.",
+      "prompt": "Create a short diagnostic test to verify that Google Play Asset Delivery is functioning correctly in my UE5.8 build before committing the final APK.",
+      "variables": [],
+      "tags": [
+        "ue5",
+        "asset-delivery",
+        "apk"
+      ]
+    },
+    {
+      "id": "tech-10",
+      "slug": "daily-tech-stack-reset",
+      "title": "The Daily Tech Stack Reset",
+      "category": "genius-os-tech",
+      "summary": "Design a 10-minute end-of-day routine that prepares my local environment (Tailwind CSS v4, Three.js, Astro) for the next morning, removing all starting frict...",
+      "prompt": "Design a 10-minute end-of-day routine that prepares my local environment (Tailwind CSS v4, Three.js, Astro) for the next morning, removing all starting friction for my highest leverage task.",
+      "variables": [],
+      "tags": [
+        "routine",
+        "tailwind",
+        "astro"
+      ]
+    },
+    {
+      "id": "cre-01",
+      "slug": "wednesday-addams-hook",
+      "title": "The Wednesday Addams Hook",
+      "category": "creative-character-lock",
+      "summary": "Script a 15-second TikTok Shop ad using a gothic/Wednesday Addams aesthetic contrasting with a bright modern environment.",
+      "prompt": "Script a 15-second TikTok Shop ad using a gothic/Wednesday Addams aesthetic contrasting with a bright modern environment. Embed cold-reading visual triggers in the first 3 seconds to halt the doom-scroll.",
+      "variables": [],
+      "tags": [
+        "tiktok",
+        "ad",
+        "hook"
+      ]
+    },
+    {
+      "id": "cre-02",
+      "slug": "character-lock-memory-palace",
+      "title": "The Character Lock Memory Palace",
+      "category": "creative-character-lock",
+      "summary": "Design a mental 'Memory Palace' framework for organizing the prompt seeds, seed values, and negative prompts required to maintain 100% character consistency ...",
+      "prompt": "Design a mental 'Memory Palace' framework for organizing the prompt seeds, seed values, and negative prompts required to maintain 100% character consistency across a 10-video AI UGC campaign.",
+      "variables": [],
+      "tags": [
+        "character-lock",
+        "memory-palace",
+        "ugc"
+      ]
+    },
+    {
+      "id": "cre-03",
+      "slug": "micro-expression-ad-audit",
+      "title": "The Micro-Expression Ad Audit",
+      "category": "creative-character-lock",
+      "summary": "Create a checklist based on Patrick Jane's observation techniques to audit AI-generated human faces in our Meta video creatives.",
+      "prompt": "Create a checklist based on Patrick Jane's observation techniques to audit AI-generated human faces in our Meta video creatives. Look for unnatural eye twitches or lip syncing failures that break viewer trust.",
+      "variables": [],
+      "tags": [
+        "audit",
+        "faces",
+        "meta"
+      ]
+    },
+    {
+      "id": "cre-04",
+      "slug": "wellness-drink-subconscious-trigger",
+      "title": "The Wellness Drink Subconscious Trigger",
+      "category": "creative-character-lock",
+      "summary": "Draft the visual storyboard for an organic Mulethi root and Beetroot powder wellness drink.",
+      "prompt": "Draft the visual storyboard for an organic Mulethi root and Beetroot powder wellness drink. Use dark psychology color theory and pacing to trigger a subconscious desire for skin-clearing health.",
+      "variables": [],
+      "tags": [
+        "storyboard",
+        "wellness",
+        "drink"
+      ]
+    },
+    {
+      "id": "cre-05",
+      "slug": "soft-reject-creative-pitch",
+      "title": "The Soft Reject Creative Pitch",
+      "category": "creative-character-lock",
+      "summary": "Write an email to a client rejecting their boring ad concept.",
+      "prompt": "Write an email to a client rejecting their boring ad concept. Use the 'Soft Reject' technique (e.g., 'That's one way to look at it, but most average brands do that...') to pivot them toward our high-performance Character Lock framework.",
+      "variables": [],
+      "tags": [
+        "pitch",
+        "client",
+        "email"
+      ]
+    },
+    {
+      "id": "cre-06",
+      "slug": "3d-motion-graphics-leverage",
+      "title": "The 3D Motion Graphics Leverage",
+      "category": "creative-character-lock",
+      "summary": "Evaluate my workflow for creating 3D motion graphics for DTC brands.",
+      "prompt": "Evaluate my workflow for creating 3D motion graphics for DTC brands. What high-effort, low-impact rendering tasks can be eliminated, simplified, or delayed to double my output speed?",
+      "variables": [],
+      "tags": [
+        "3d",
+        "motion",
+        "workflow"
+      ]
+    },
+    {
+      "id": "cre-07",
+      "slug": "viral-format-reverse-engineering",
+      "title": "The Viral Format Reverse-Engineering",
+      "category": "creative-character-lock",
+      "summary": "Use the 'Import from GitHub' / Reverse Engineering mindset to break down a competitor's viral TikTok ad.",
+      "prompt": "Use the 'Import from GitHub' / Reverse Engineering mindset to break down a competitor's viral TikTok ad. How do I deconstruct their pacing, sound design, and frame-shifts to build a superior template?",
+      "variables": [],
+      "tags": [
+        "viral",
+        "tiktok",
+        "analysis"
+      ]
+    },
+    {
+      "id": "cre-08",
+      "slug": "client-side-tool-landing-page",
+      "title": "The Client-Side Tool Landing Page",
+      "category": "creative-character-lock",
+      "summary": "Write the copy for texttotable.site (Text to Columns Online).",
+      "prompt": "Write the copy for texttotable.site (Text to Columns Online). Use psychological leverage to highlight the absolute data privacy of a client-side clipboard utility compared to server-side competitors.",
+      "variables": [],
+      "tags": [
+        "copywriting",
+        "privacy",
+        "landing-page"
+      ]
+    },
+    {
+      "id": "cre-09",
+      "slug": "fab-asset-store-optimization",
+      "title": "The Fab Asset Store Optimization",
+      "category": "creative-character-lock",
+      "summary": "Create a strategic plan for publishing 3D models and developer asset packs on Fab.",
+      "prompt": "Create a strategic plan for publishing 3D models and developer asset packs on Fab. Use the Feedback Loop principle to define exactly what metrics (views vs. wishlists) will dictate our next asset pack theme.",
+      "variables": [],
+      "tags": [
+        "fab",
+        "assets",
+        "strategy"
+      ]
+    },
+    {
+      "id": "cre-10",
+      "slug": "orqa-ludo-grove-engagement-loop",
+      "title": "The Orqa Ludo Grove Engagement Loop",
+      "category": "creative-character-lock",
+      "summary": "Design the push notification strategy for 'Orqa Ludo Grove'.",
+      "prompt": "Design the push notification strategy for 'Orqa Ludo Grove'. Use calculated unpredictability and emotional triggers to maximize daily active users without being marked as spam.",
+      "variables": [],
+      "tags": [
+        "ludo",
+        "push",
+        "retention"
+      ]
+    },
+    {
+      "id": "dw-01",
+      "slug": "unstoppable-focus-protocol",
+      "title": "The Unstoppable Focus Protocol",
+      "category": "deep-work",
+      "summary": "Design a customized 4-hour morning deep work block for architecture planning.",
+      "prompt": "Design a customized 4-hour morning deep work block for architecture planning. Integrate the principle of 'Strategic Silence' not just for communication, but for my physical environment.",
+      "variables": [],
+      "tags": [
+        "deep-work",
+        "focus",
+        "morning"
+      ]
+    },
+    {
+      "id": "dw-02",
+      "slug": "define-done-web-agency-sprint",
+      "title": "The Define Done Web Agency Sprint",
+      "category": "deep-work",
+      "summary": "For the ongoing web development of orqasolutions.online, explicitly define 'done' for a 90-minute session focused purely on the Tailwind CSS v4 responsive la...",
+      "prompt": "For the ongoing web development of orqasolutions.online, explicitly define 'done' for a 90-minute session focused purely on the Tailwind CSS v4 responsive layout.",
+      "variables": [],
+      "tags": [
+        "done-state",
+        "tailwind",
+        "agency"
+      ]
+    },
+    {
+      "id": "dw-03",
+      "slug": "energy-trap-elimination",
+      "title": "The Energy Trap Elimination",
+      "category": "deep-work",
+      "summary": "I am spending too much time researching plant-based superfoods on Daraz instead of coding.",
+      "prompt": "I am spending too much time researching plant-based superfoods on Daraz instead of coding. Create a psychological interrupt that frames this research as a 'Low Impact, High Effort' energy trap during work hours.",
+      "variables": [],
+      "tags": [
+        "energy",
+        "distraction",
+        "focus"
+      ]
+    },
+    {
+      "id": "dw-04",
+      "slug": "high-status-pacing-routine",
+      "title": "The High-Status Pacing Routine",
+      "category": "deep-work",
+      "summary": "Translate the 'Body Language of Control' (slow movements, relaxed posture, steady eye contact) into a pre-meeting physical routine to ground myself before pi...",
+      "prompt": "Translate the 'Body Language of Control' (slow movements, relaxed posture, steady eye contact) into a pre-meeting physical routine to ground myself before pitching enterprise clients on Zoom.",
+      "variables": [],
+      "tags": [
+        "body-language",
+        "meeting",
+        "pitch"
+      ]
+    },
+    {
+      "id": "dw-05",
+      "slug": "frictionless-game-design-engine",
+      "title": "The Frictionless Game Design Engine",
+      "category": "deep-work",
+      "summary": "I want to build out the remaining campaign missions for the 3D web shooter.",
+      "prompt": "I want to build out the remaining campaign missions for the 3D web shooter. Redesign my digital workspace friction so that opening Three.js and the mission logic file is the easiest possible action when I sit down.",
+      "variables": [],
+      "tags": [
+        "threejs",
+        "workspace",
+        "friction"
+      ]
+    },
+    {
+      "id": "dw-06",
+      "slug": "cognitive-load-offloading",
+      "title": "The Cognitive Load Offloading",
+      "category": "deep-work",
+      "summary": "Use the Memory Palace concept to mentally map out the entire app ecosystem (wallpapers, launchers, arcade games, financial tools) so I can context-switch sea...",
+      "prompt": "Use the Memory Palace concept to mentally map out the entire app ecosystem (wallpapers, launchers, arcade games, financial tools) so I can context-switch seamlessly without feeling overwhelmed.",
+      "variables": [],
+      "tags": [
+        "memory-palace",
+        "ecosystem",
+        "context-switch"
+      ]
+    },
+    {
+      "id": "dw-07",
+      "slug": "no-perfection-rule",
+      "title": "The No Perfection Rule",
+      "category": "deep-work",
+      "summary": "Draft a personal manifesto for ORQA Solutions based on Parkinson's Law.",
+      "prompt": "Draft a personal manifesto for ORQA Solutions based on Parkinson's Law. Establish the rule that speed of execution and rapid market feedback loop is infinitely superior to delayed perfection in web tool architecture.",
+      "variables": [],
+      "tags": [
+        "manifesto",
+        "parkinsons-law",
+        "shipping"
+      ]
+    },
+    {
+      "id": "dw-08",
+      "slug": "14-day-agency-scale-challenge",
+      "title": "The 14-Day Agency Scale Challenge",
+      "category": "deep-work",
+      "summary": "Map out a 14-day 'Genius Operating System' challenge specifically for acquiring 3 new B2B performance marketing clients.",
+      "prompt": "Map out a 14-day 'Genius Operating System' challenge specifically for acquiring 3 new B2B performance marketing clients. What is the one daily signal I must measure?",
+      "variables": [],
+      "tags": [
+        "challenge",
+        "b2b",
+        "clients"
+      ]
+    },
+    {
+      "id": "dw-09",
+      "slug": "emotional-reactivity-shield",
+      "title": "The Emotional Reactivity Shield",
+      "category": "deep-work",
+      "summary": "Create a mental framework for dealing with Google Play Console rejections or policy strikes.",
+      "prompt": "Create a mental framework for dealing with Google Play Console rejections or policy strikes. How do I apply 'Emotional Non-Reactivity' to immediately diagnose the technical compliance issue without frustration?",
+      "variables": [],
+      "tags": [
+        "play-console",
+        "resilience",
+        "compliance"
+      ]
+    },
+    {
+      "id": "dw-10",
+      "slug": "asymmetrical-effort-audit",
+      "title": "The Asymmetrical Effort Audit",
+      "category": "deep-work",
+      "summary": "Look at my daily content calendar planning for LinkedIn and Instagram.",
+      "prompt": "Look at my daily content calendar planning for LinkedIn and Instagram. Where am I applying symmetrical effort (treating all posts equally) instead of finding the asymmetrical leverage point that drives 80% of the engagement?",
+      "variables": [],
+      "tags": [
+        "content",
+        "leverage",
+        "audit"
+      ]
+    },
+    {
+      "id": "eco-01",
+      "slug": "fire-calculator-retention-hook",
+      "title": "The FIRE Calculator Retention Hook",
+      "category": "ecosystem-scaling",
+      "summary": "Design the user flow for the FIRE calculator utility on freefinancialcal.com.",
+      "prompt": "Design the user flow for the FIRE calculator utility on freefinancialcal.com. How can I use visual progress bars and psychological anchoring to make users inherently trust the privacy-first architecture?",
+      "variables": [],
+      "tags": [
+        "fire",
+        "calculator",
+        "retention"
+      ]
+    },
+    {
+      "id": "eco-02",
+      "slug": "zero-api-manifesto",
+      "title": "The Zero-API Manifesto",
+      "category": "ecosystem-scaling",
+      "summary": "Write a thought-leadership article for LinkedIn explaining why client-side, zero-API architecture is the future of web utilities.",
+      "prompt": "Write a thought-leadership article for LinkedIn explaining why client-side, zero-API architecture is the future of web utilities. Use frame control to position server-dependent apps as outdated and unsafe.",
+      "variables": [],
+      "tags": [
+        "linkedin",
+        "zero-api",
+        "thought-leadership"
+      ]
+    },
+    {
+      "id": "eco-03",
+      "slug": "asset-store-dominance-strategy",
+      "title": "The Asset Store Dominance Strategy",
+      "category": "ecosystem-scaling",
+      "summary": "Plan the release schedule for 5 developer asset packs on Fab.",
+      "prompt": "Plan the release schedule for 5 developer asset packs on Fab. How do I use the 'Critical Failure Point' analysis to ensure none of the packs get buried in the algorithm on launch week?",
+      "variables": [],
+      "tags": [
+        "fab",
+        "release",
+        "strategy"
+      ]
+    },
+    {
+      "id": "eco-04",
+      "slug": "ludo-grove-monetization-psychology",
+      "title": "The Ludo Grove Monetization Psychology",
+      "category": "ecosystem-scaling",
+      "summary": "Design the in-app purchase economy for 'Orqa Ludo Grove'.",
+      "prompt": "Design the in-app purchase economy for 'Orqa Ludo Grove'. Use soft psychological leverage — offering immense free value but creating slight friction that users gladly pay to remove.",
+      "variables": [],
+      "tags": [
+        "ludo",
+        "monetization",
+        "iap"
+      ]
+    },
+    {
+      "id": "eco-05",
+      "slug": "call-of-honour-lore-bible",
+      "title": "The Call of Honour Lore Bible",
+      "category": "ecosystem-scaling",
+      "summary": "Structure a lore and narrative document for the 35 campaign missions.",
+      "prompt": "Structure a lore and narrative document for the 35 campaign missions. Use the method of Loci (Memory Palace) to organize the enemy factions, weapon tiers, and level environments efficiently.",
+      "variables": [],
+      "tags": [
+        "lore",
+        "memory-palace",
+        "game"
+      ]
+    },
+    {
+      "id": "eco-06",
+      "slug": "cross-promotion-funnel",
+      "title": "The Cross-Promotion Funnel",
+      "category": "ecosystem-scaling",
+      "summary": "Map out a seamless cross-promotion strategy between the 'NOIR // VORTEX 4K' app and the Flutter arcade games.",
+      "prompt": "Map out a seamless cross-promotion strategy between the 'NOIR // VORTEX 4K' app and the Flutter arcade games. How do I move users between apps without triggering ad fatigue?",
+      "variables": [],
+      "tags": [
+        "cross-promotion",
+        "apps",
+        "funnel"
+      ]
+    },
+    {
+      "id": "eco-07",
+      "slug": "agentic-workflow-for-video-ads",
+      "title": "The Agentic Workflow for Video Ads",
+      "category": "ecosystem-scaling",
+      "summary": "Design a completely automated workflow using AI agents to scrape trending TikTok audio, generate Character Lock image seeds, and compile the final 3D motion ...",
+      "prompt": "Design a completely automated workflow using AI agents to scrape trending TikTok audio, generate Character Lock image seeds, and compile the final 3D motion graphic prompt sequence.",
+      "variables": [],
+      "tags": [
+        "agents",
+        "automation",
+        "video-ads"
+      ]
+    },
+    {
+      "id": "eco-08",
+      "slug": "orqa-games-publisher-identity",
+      "title": "The ORQA Games Publisher Identity",
+      "category": "ecosystem-scaling",
+      "summary": "Draft the brand positioning statement for the 5 Google Play Console accounts.",
+      "prompt": "Draft the brand positioning statement for the 5 Google Play Console accounts. How do we use 'Calculated Vulnerability' in our app store descriptions to connect with indie gamers while projecting AAA studio competence?",
+      "variables": [],
+      "tags": [
+        "branding",
+        "play-console",
+        "publisher"
+      ]
+    },
+    {
+      "id": "eco-09",
+      "slug": "text-to-columns-growth-loop",
+      "title": "The Text-to-Columns Growth Loop",
+      "category": "ecosystem-scaling",
+      "summary": "Design a viral growth loop for texttotable.site.",
+      "prompt": "Design a viral growth loop for texttotable.site. What specific feature can I add that makes data analysts want to share this client-side formatting tool with their entire department?",
+      "variables": [],
+      "tags": [
+        "growth",
+        "texttotable",
+        "sharing"
+      ]
+    },
+    {
+      "id": "eco-10",
+      "slug": "ultimate-ecosystem-synergy",
+      "title": "The Ultimate Ecosystem Synergy",
+      "category": "ecosystem-scaling",
+      "summary": "Create a high-level mind map prompt that connects the cash flow from the B2B performance ad agency to the R&D funding for the Unreal Engine 5 racing games an...",
+      "prompt": "Create a high-level mind map prompt that connects the cash flow from the B2B performance ad agency to the R&D funding for the Unreal Engine 5 racing games and AstroJS web tools, ensuring all systems feed into each other.",
+      "variables": [],
+      "tags": [
+        "ecosystem",
+        "strategy",
+        "mind-map"
+      ]
     }
   ],
-  "version": "1.1.0"
+  "version": "1.2.0"
 }
