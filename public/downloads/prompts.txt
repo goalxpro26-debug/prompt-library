@@ -110,3 +110,43 @@ Analyze the first 5 seconds of this video. Give me 10 alternative hooks that wou
 
 Repurpose for Every Platform [Video Editing]
 Turn this video into a complete short-form content package. Create versions optimized for TikTok, Instagram Reels, YouTube Shorts and Facebook. Give me the recommended duration, hook, caption style, title, on-screen text and CTA for each platform.
+
+---
+
+Define Your Goal in Writing [Mindset & Goals]
+Help me define my biggest goal clearly, in writing. My goal area is [GOAL AREA], and what I want in broad terms is [BROAD GOAL]. Ask me up to 5 short clarifying questions, one at a time if needed, then help me write it as one specific sentence: what I will achieve, by [TIMEFRAME], and how I will know it is done. Then add two lines: why it matters to me, and what my life looks like on a normal day once it is achieved. Keep it concrete and measurable where possible. Do not promise that writing it down guarantees the outcome.
+
+---
+
+Visualize Your Future Life [Mindset & Goals]
+Guide me through a visualization of my future life if I achieve [GOAL]. Start with a normal day [TIMEFRAME] from now: where I am in the morning, what work I am doing, who I am with, and how I feel at the end of the day. Keep it vivid but realistic — no fantasy wealth or fame unless that is the actual goal. After the visualization, ask me three questions: which part felt most motivating, which part felt most believable, and which part felt furthest away. Then help me turn the most motivating part into one practical next step.
+
+---
+
+FTBA Alignment Check [Mindset & Goals]
+Help me check my FTBA alignment for this goal: [GOAL]. For each of the four — Feelings, Thoughts, Beliefs, Actions — ask me what is actually true right now, not what I wish were true. Then make a simple table: for each one, what supports the goal and what works against it. Highlight any direct conflict, for example a belief that says 'I can't' paired with an action that avoids the work. Finish with the single biggest misalignment and one small change I can make to it this week. Do not diagnose mental health conditions or replace professional support.
+
+---
+
+Build Honest Affirmations [Mindset & Goals]
+Help me write 5 affirmations for my goal: [GOAL]. They must be believable to me, written in the present tense, and linked to an action I actually control — for example 'I show up and do the work' rather than 'I am already rich.' Avoid claims that affirmations alone guarantee results, and avoid anything that contradicts facts I give you. For each affirmation, add one line: the daily action that backs it up. Then give me a 2-minute morning routine for reading them and picking today's action.
+
+---
+
+Pre-Sleep Visualization Routine [Mindset & Goals]
+Create a 5-minute pre-sleep routine for my goal: [GOAL]. Step 1: one minute to write down tomorrow's single most important action. Step 2: three minutes to quietly imagine doing that action well, step by step, including one obstacle and how I handle it. Step 3: one minute to let it go and rest. Keep the tone calm and practical, not hyped. Include exactly what to write, what to picture, and what to do if my mind wanders. Do not claim this technique guarantees results while I sleep.
+
+---
+
+One Action Today [Mindset & Goals]
+From my biggest goal — [GOAL] — help me pick exactly one action I can take today in under [TIME AVAILABLE]. It must be specific (what, where, when), small enough to actually finish today, and clearly move me closer to the goal. Give me the action, the first physical step to start it, and what 'done' looks like. If I give you excuses or obstacles, help me shrink the action rather than dropping it. End with a one-line check-in I can answer tonight: did I do it, yes or no, and what got in the way if not.
+
+---
+
+Find Why You Stalled [Mindset & Goals]
+Help me find why I stalled on this goal before: [GOAL]. Ask me about my last serious attempt: what I tried, how long I kept going, where I stopped, and what I told myself at the time. Then sort the causes into three groups: unclear goal, conflicting belief, and missing or inconsistent action. Name the most likely main cause in plain language, with evidence from my own answers — do not invent a cause I did not mention. Finish with one different approach for this attempt that directly addresses that cause, and one early warning sign that I am stalling again.
+
+---
+
+Daily Focus Practice [Mindset & Goals]
+Build me a simple daily practice to stay focused on my goal: [GOAL]. I have about [MINUTES PER DAY] minutes total. Split it into three short parts: morning (pick today's one action and read my goal sentence), midday (a 1-minute check: am I on track, yes or no, and what is next), and evening (review what I did, what I learned, and tomorrow's one action). Make it fit on one page, use my own words where I give them, and keep every step under 5 minutes. Include a weekly review question: what worked, what didn't, and what changes next week. Do not add extra habits, apps, or purchases I did not ask for.

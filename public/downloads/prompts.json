@@ -14,6 +14,11 @@
       "description": "Turn raw footage into reels, clips, hooks and platform-ready packages.",
       "id": "video-editing",
       "label": "Video Editing"
+    },
+    {
+      "id": "mindset-goals",
+      "label": "Mindset & Goals",
+      "description": "From the manifestation video: define it, write it, visualise it, check FTBA alignment, then take one real action. No guaranteed outcomes — clarity plus action."
     }
   ],
   "prompts": [
@@ -376,7 +381,143 @@
       ],
       "title": "Repurpose for Every Platform",
       "variables": []
+    },
+    {
+      "id": "mindset-01",
+      "slug": "define-your-goal-in-writing",
+      "title": "Define Your Goal in Writing",
+      "category": "mindset-goals",
+      "summary": "Turn a vague wish into one specific written goal — what, why, and what success looks like.",
+      "prompt": "Help me define my biggest goal clearly, in writing. My goal area is [GOAL AREA], and what I want in broad terms is [BROAD GOAL]. Ask me up to 5 short clarifying questions, one at a time if needed, then help me write it as one specific sentence: what I will achieve, by [TIMEFRAME], and how I will know it is done. Then add two lines: why it matters to me, and what my life looks like on a normal day once it is achieved. Keep it concrete and measurable where possible. Do not promise that writing it down guarantees the outcome.",
+      "variables": [
+        "GOAL AREA",
+        "BROAD GOAL",
+        "TIMEFRAME"
+      ],
+      "tags": [
+        "goals",
+        "clarity",
+        "writing"
+      ]
+    },
+    {
+      "id": "mindset-02",
+      "slug": "visualize-your-future-life",
+      "title": "Visualize Your Future Life",
+      "category": "mindset-goals",
+      "summary": "A guided visualization of a normal day in the life you want — then what it tells you to do.",
+      "prompt": "Guide me through a visualization of my future life if I achieve [GOAL]. Start with a normal day [TIMEFRAME] from now: where I am in the morning, what work I am doing, who I am with, and how I feel at the end of the day. Keep it vivid but realistic — no fantasy wealth or fame unless that is the actual goal. After the visualization, ask me three questions: which part felt most motivating, which part felt most believable, and which part felt furthest away. Then help me turn the most motivating part into one practical next step.",
+      "variables": [
+        "GOAL",
+        "TIMEFRAME"
+      ],
+      "tags": [
+        "visualization",
+        "future-self",
+        "motivation"
+      ]
+    },
+    {
+      "id": "mindset-03",
+      "slug": "ftba-alignment-check",
+      "title": "FTBA Alignment Check",
+      "category": "mindset-goals",
+      "summary": "Audit Feelings, Thoughts, Beliefs and Actions around one goal — and spot where they conflict.",
+      "prompt": "Help me check my FTBA alignment for this goal: [GOAL]. For each of the four — Feelings, Thoughts, Beliefs, Actions — ask me what is actually true right now, not what I wish were true. Then make a simple table: for each one, what supports the goal and what works against it. Highlight any direct conflict, for example a belief that says 'I can't' paired with an action that avoids the work. Finish with the single biggest misalignment and one small change I can make to it this week. Do not diagnose mental health conditions or replace professional support.",
+      "variables": [
+        "GOAL"
+      ],
+      "tags": [
+        "ftba",
+        "alignment",
+        "beliefs",
+        "audit"
+      ]
+    },
+    {
+      "id": "mindset-04",
+      "slug": "build-honest-affirmations",
+      "title": "Build Honest Affirmations",
+      "category": "mindset-goals",
+      "summary": "Five believable, action-linked affirmations — no hype, no guaranteed results.",
+      "prompt": "Help me write 5 affirmations for my goal: [GOAL]. They must be believable to me, written in the present tense, and linked to an action I actually control — for example 'I show up and do the work' rather than 'I am already rich.' Avoid claims that affirmations alone guarantee results, and avoid anything that contradicts facts I give you. For each affirmation, add one line: the daily action that backs it up. Then give me a 2-minute morning routine for reading them and picking today's action.",
+      "variables": [
+        "GOAL"
+      ],
+      "tags": [
+        "affirmations",
+        "mindset",
+        "routine"
+      ]
+    },
+    {
+      "id": "mindset-05",
+      "slug": "pre-sleep-visualization-routine",
+      "title": "Pre-Sleep Visualization Routine",
+      "category": "mindset-goals",
+      "summary": "A calm 5-minute routine to imagine tomorrow's goal before sleep — and plan the morning.",
+      "prompt": "Create a 5-minute pre-sleep routine for my goal: [GOAL]. Step 1: one minute to write down tomorrow's single most important action. Step 2: three minutes to quietly imagine doing that action well, step by step, including one obstacle and how I handle it. Step 3: one minute to let it go and rest. Keep the tone calm and practical, not hyped. Include exactly what to write, what to picture, and what to do if my mind wanders. Do not claim this technique guarantees results while I sleep.",
+      "variables": [
+        "GOAL"
+      ],
+      "tags": [
+        "sleep",
+        "visualization",
+        "routine",
+        "planning"
+      ]
+    },
+    {
+      "id": "mindset-06",
+      "slug": "one-action-today",
+      "title": "One Action Today",
+      "category": "mindset-goals",
+      "summary": "From a big goal to exactly one doable action today, in under a set time.",
+      "prompt": "From my biggest goal — [GOAL] — help me pick exactly one action I can take today in under [TIME AVAILABLE]. It must be specific (what, where, when), small enough to actually finish today, and clearly move me closer to the goal. Give me the action, the first physical step to start it, and what 'done' looks like. If I give you excuses or obstacles, help me shrink the action rather than dropping it. End with a one-line check-in I can answer tonight: did I do it, yes or no, and what got in the way if not.",
+      "variables": [
+        "GOAL",
+        "TIME AVAILABLE"
+      ],
+      "tags": [
+        "action",
+        "daily",
+        "habits"
+      ]
+    },
+    {
+      "id": "mindset-07",
+      "slug": "find-why-you-stalled",
+      "title": "Find Why You Stalled",
+      "category": "mindset-goals",
+      "summary": "The 'number-one mistake' audit: why past attempts stalled, in feelings, beliefs and actions.",
+      "prompt": "Help me find why I stalled on this goal before: [GOAL]. Ask me about my last serious attempt: what I tried, how long I kept going, where I stopped, and what I told myself at the time. Then sort the causes into three groups: unclear goal, conflicting belief, and missing or inconsistent action. Name the most likely main cause in plain language, with evidence from my own answers — do not invent a cause I did not mention. Finish with one different approach for this attempt that directly addresses that cause, and one early warning sign that I am stalling again.",
+      "variables": [
+        "GOAL"
+      ],
+      "tags": [
+        "blocks",
+        "mistakes",
+        "review"
+      ]
+    },
+    {
+      "id": "mindset-08",
+      "slug": "daily-focus-practice",
+      "title": "Daily Focus Practice",
+      "category": "mindset-goals",
+      "summary": "A simple morning / midday / evening practice to stay focused on one goal.",
+      "prompt": "Build me a simple daily practice to stay focused on my goal: [GOAL]. I have about [MINUTES PER DAY] minutes total. Split it into three short parts: morning (pick today's one action and read my goal sentence), midday (a 1-minute check: am I on track, yes or no, and what is next), and evening (review what I did, what I learned, and tomorrow's one action). Make it fit on one page, use my own words where I give them, and keep every step under 5 minutes. Include a weekly review question: what worked, what didn't, and what changes next week. Do not add extra habits, apps, or purchases I did not ask for.",
+      "variables": [
+        "GOAL",
+        "MINUTES PER DAY"
+      ],
+      "tags": [
+        "daily-practice",
+        "focus",
+        "routine",
+        "review"
+      ]
     }
   ],
-  "version": "1.0.0"
+  "version": "1.1.0"
 }
