@@ -1,0 +1,151 @@
+---
+import Base from '../layouts/Base.astro';
+import data from '../data/prompts.json';
+
+const total = data.prompts.length;
+const catLabel = Object.fromEntries(data.categories.map((c) => [c.id, c.label]));
+---
+<Base title="Prompt Press — a working prompt library">
+  <div class="wrap">
+    <header class="masthead">
+      <div class="masthead-top">
+        <span>Vol. 1 — Working library</span>
+        <span><a href="#downloads">Downloads</a> &nbsp;·&nbsp; <a href="#add">Add a prompt</a></span>
+        <span>{total} prompts · Updated Oct 2026</span>
+      </div>
+      <div class="brand">
+        <h1>Prompt <em>Press</em></h1>
+        <p>Copy-ready prompts for real work — <strong>design, digital products, video editing.</strong><br/>Fill the [brackets], paste, go. No filler, no invented claims.</p>
+      </div>
+    </header>
+
+    <div class="controls">
+      <div class="controls-row">
+        <label class="search"><span>SEARCH ⌕</span><input id="search" type="search" placeholder="Try: thumbnail, reel, sales page…" autocomplete="off" /></label>
+        <span class="count" id="count">{total} prompts</span>
+      </div>
+      <div class="chips" role="group" aria-label="Filter by category">
+        <button class="chip" data-cat="all" aria-pressed="true">All · {total}</button>
+        {data.categories.map((c) => {
+          const n = data.prompts.filter((p) => p.category === c.id).length;
+          return <button class="chip" data-cat={c.id} aria-pressed="false">{c.label} · {n}</button>;
+        })}
+      </div>
+    </div>
+
+    <main>
+      {data.categories.map((cat) => {
+        const items = data.prompts.filter((p) => p.category === cat.id);
+        return (
+          <section data-cat-section={cat.id}>
+            <div class="section-head">
+              <h2>{cat.label}</h2>
+              <p>{cat.description}</p>
+            </div>
+            <div class="grid">
+              {items.map((p) => (
+                <article class="card" data-cat={p.category} data-search={`${p.title} ${p.summary} ${p.prompt} ${(p.tags ?? []).join(' ')}`.toLowerCase()}>
+                  <div class="card-top">
+                    <span class="card-no">№ {p.id.toUpperCase()}</span>
+                    <span class="stamp">{catLabel[p.category]}</span>
+                  </div>
+                  <h3><a href={`/prompts/${p.slug}/`}>{p.title}</a></h3>
+                  <p>{p.summary}</p>
+                  <div class="prompt-preview">{p.prompt}</div>
+                  {p.variables?.length ? (
+                    <div class="vars">{p.variables.map((v) => <code>[{v}]</code>)}</div>
+                  ) : null}
+                  {p.format ? <div class="vars"><code>{p.format}</code></div> : null}
+                  <div class="card-actions">
+                    <button class="btn copy-btn" data-prompt={p.prompt}>Copy prompt</button>
+                    <a class="btn btn-ghost" href={`/prompts/${p.slug}/`}>Open →</a>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+        );
+      })}
+      <div class="empty" id="empty">
+        <h3>Nothing in the press matches that.</h3>
+        <p>Try a shorter word — or send it as a new prompt idea (see “Add a prompt” below).</p>
+      </div>
+
+      <section class="band" id="downloads">
+        <div class="band-grid">
+          <div>
+            <h2>Take the whole library with you</h2>
+            <p>Same data as this site, regenerated from one source file every build — so the downloads never go stale.</p>
+            <div class="dl-list">
+              <a class="btn" href="/downloads/prompts.json" download>↓ prompts.json</a>
+              <a class="btn btn-ghost" href="/downloads/prompts.csv" download>↓ prompts.csv</a>
+              <a class="btn btn-ghost" href="/downloads/prompts.md" download>↓ prompts.md</a>
+              <a class="btn btn-ghost" href="/downloads/prompts.txt" download>↓ prompts.txt</a>
+            </div>
+          </div>
+          <div id="add">
+            <h2>Add a prompt</h2>
+            <p>You don't write the final prompt. You send raw material — a note, a transcript, a list, a screenshot — and it's turned into a clean, categorised prompt and added here.</p>
+            <ol class="steps">
+              <li><strong>Send the raw data</strong> — paste it, no format needed.</li>
+              <li><strong>It gets rewritten</strong> as one job, with <code>[VARIABLES]</code> pulled out.</li>
+              <li><strong>It's categorised</strong> and the site + downloads rebuild.</li>
+            </ol>
+            <p style="margin-top:14px">Full workflow: <code>data/add-prompt-template.md</code> in the repo.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Prompt Press — paper, ink &amp; one vermilion accent</span>
+      <span>Astro · Cloudflare Pages · GitHub</span>
+    </footer>
+  </div>
+
+  <script>
+    const search = document.getElementById('search');
+    const count = document.getElementById('count');
+    const empty = document.getElementById('empty');
+    const chips = [...document.querySelectorAll('.chip')];
+    let activeCat = 'all';
+
+    function apply() {
+      const q = (search.value || '').trim().toLowerCase();
+      let visible = 0;
+      document.querySelectorAll('.card').forEach((card) => {
+        const okCat = activeCat === 'all' || card.dataset.cat === activeCat;
+        const okQ = !q || card.dataset.search.includes(q);
+        const show = okCat && okQ;
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      document.querySelectorAll('[data-cat-section]').forEach((sec) => {
+        const any = [...sec.querySelectorAll('.card')].some((c) => c.style.display !== 'none');
+        sec.style.display = any ? '' : 'none';
+      });
+      count.textContent = visible + (visible === 1 ? ' prompt' : ' prompts');
+      empty.classList.toggle('show', visible === 0);
+    }
+
+    chips.forEach((chip) => chip.addEventListener('click', () => {
+      activeCat = chip.dataset.cat;
+      chips.forEach((c) => c.setAttribute('aria-pressed', String(c === chip)));
+      apply();
+    }));
+    search.addEventListener('input', apply);
+
+    document.querySelectorAll('.copy-btn').forEach((btn) => {
+      btn.addEventListener('click', async () => {
+        const original = btn.textContent;
+        try {
+          await navigator.clipboard.writeText(btn.dataset.prompt);
+          btn.textContent = 'Copied ✓';
+        } catch {
+          btn.textContent = 'Select manually →';
+        }
+        setTimeout(() => (btn.textContent = original), 1800);
+      });
+    });
+  </script>
+</Base>

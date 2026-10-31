@@ -1,0 +1,67 @@
+---
+import Base from '../../layouts/Base.astro';
+import data from '../../data/prompts.json';
+
+export async function getStaticPaths() {
+  return data.prompts.map((p) => ({ params: { slug: p.slug }, props: { prompt: p } }));
+}
+
+const { prompt: p } = Astro.props;
+const cat = data.categories.find((c) => c.id === p.category);
+const others = data.prompts.filter((x) => x.category === p.category && x.id !== p.id).slice(0, 3);
+---
+<Base title={`${p.title} — Prompt Press`} description={p.summary}>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="masthead-top">
+        <span><a href="/">← Prompt Press</a></span>
+        <span>{cat.label}</span>
+        <span>№ {p.id.toUpperCase()}</span>
+      </div>
+    </header>
+    <main class="detail" style="padding-top:28px">
+      <a class="back" href="/">← Back to the library</a>
+      <h1>{p.title}</h1>
+      <p class="summary">{p.summary}</p>
+      <div class="detail-meta">
+        <span class="meta-pill">{cat.label}</span>
+        {p.format ? <span class="meta-pill">{p.format}</span> : null}
+        {(p.tags ?? []).map((t) => <span class="meta-pill">#{t}</span>)}
+      </div>
+      {p.variables?.length ? (
+        <div style="margin-bottom:18px">
+          <p style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#8a8272;margin:0 0 8px">Fill in before you paste</p>
+          <div class="vars">{p.variables.map((v) => <code>[{v}]</code>)}</div>
+        </div>
+      ) : null}
+      <div class="prompt-box">
+        <pre>{p.prompt}</pre>
+      </div>
+      <div class="card-actions" style="margin-top:18px">
+        <button class="btn copy-btn" id="copyBtn" data-prompt={p.prompt}>Copy prompt</button>
+        <a class="btn btn-ghost" href="/#downloads">Download all ↓</a>
+      </div>
+      {others.length ? (
+        <section style="margin-top:44px">
+          <h2 style="font-family:'Fraunces',Georgia,serif;font-size:26px;margin:0 0 12px">More in {cat.label}</h2>
+          <ul style="padding-left:20px">
+            {others.map((o) => <li style="margin-bottom:8px"><a href={`/prompts/${o.slug}/`}>{o.title}</a> — {o.summary}</li>)}
+          </ul>
+        </section>
+      ) : null}
+    </main>
+    <footer>
+      <span>Prompt Press</span>
+      <span><a href="/">Back to library</a></span>
+    </footer>
+  </div>
+  <script>
+    const btn = document.getElementById('copyBtn');
+    btn?.addEventListener('click', async () => {
+      const original = btn.textContent;
+      try { await navigator.clipboard.writeText(btn.dataset.prompt); btn.textContent = 'Copied ✓'; }
+      catch { btn.textContent = 'Select manually →'; }
+      setTimeout(() => (btn.textContent = original), 1800);
+    });
+  </script>
+</Base>
